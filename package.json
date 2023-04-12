@@ -1,5 +1,6 @@
 {
   "name": "v4",
+  "description": "Sam Brocklehurst portfolio v4",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^3.1.1",
     "astro": "^2.2.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
   }
 }

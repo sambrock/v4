@@ -1,0 +1,27 @@
+---
+import Link from './Link.astro';
+import GitHubIcon from '../icons/GitHubIcon.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+---
+
+<div class="flex flex-col gap-12">
+  <div class="w-24 pt-20 pb-8"><img src="/logo/logo-3d-2.svg" /></div>
+  <div class="space-y-2">
+    <h1 class="block text-5xl font-bold text-neutral-text">Sam Brocklehurst</h1>
+    <h2 class="block text-3xl font-medium text-black/80">Full Stack Developer</h2>
+  </div>
+  <div class="grid grid-cols-2 gap-12">
+    <div class="space-y-4">
+      <p>I’m currently working at 🦺 A-SAFE as a software developer, helping to build the most advanced workplaces.</p>
+      <p>I’m interested in Next.js, React & TypeScript.</p>
+    </div>
+    <div class="space-y-2 flex flex-col items-start">
+      <Link href="mailto:hi@sambrock.com"><MailIcon /><span>Get in touch</span></Link>
+      <Link href="https://github.com/sambrock" target="_blank"><GitHubIcon /><span>GitHub</span> ↗</Link>
+      <Link href="https://www.linkedin.com/in/sam-brocklehurst/" target="_blank">
+        <LinkedInIcon /><span>LinkedIn</span> ↗
+      </Link>
+    </div>
+  </div>
+</div>
