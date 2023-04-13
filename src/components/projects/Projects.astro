@@ -1,9 +1,21 @@
+---
+import Filmq from './Filmq.astro';
+import Pace from './Pace.astro';
+import Vendee from './Vendee.astro';
+---
+
 <div class="my-36">
-  <h2 class="text-lg mb-6">Featured projects</h2>
+  <h2 class="text-lg font-medium mb-6">Featured projects</h2>
   <div class="grid gap-4 grid-cols-3 grid-rows-2 h-[600px]">
-    <div class="border border-white/10 rounded-xl col-span-2 row-start-1 row-span-1 h-full w-full"></div>
-    <div class="border border-white/10 rounded-xl col-start-3 row-start-1 col-span-1 row-span-2 h-full w-full"></div>
-    <div class="border border-white/10 rounded-xl h-full w-full"></div>
-    <div class="border border-white/10 rounded-xl h-full w-full"></div>
+    <div class="col-span-2 row-start-1 row-span-1 ">
+      <Filmq />
+    </div>
+    <div class="col-start-3 row-start-1 col-span-1 row-span-2 rounded-xl bg-white/5"></div>
+    <div class="">
+      <Vendee />
+    </div>
+    <div class="">
+      <Pace />
+    </div>
   </div>
 </div>
