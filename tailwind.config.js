@@ -5,10 +5,6 @@ export default {
     extend: {
       colors: {
         primary: '#ff1700',
-        neutral: {
-          text: '#080808',
-          bg: '#f8f8f8',
-        },
       },
     },
   },

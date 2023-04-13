@@ -7,18 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_3/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_3/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_3/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
   </head>
   <body>
     <div class="md:max-w-5xl mx-auto">
       <slot />
-      <!-- your content is injected here -->
     </div>
   </body>
 </html>
@@ -26,8 +25,13 @@
 <style is:global>
   * {
     font-family: 'Rubik', sans-serif;
-    background-color: #f8f8f8;
-    color: #080808;
+    background-color: #1e1e1e;
+    color: #e8e8e8;
+  }
+
+  *::selection {
+    background-color: #e8e8e8;
+    color: #1e1e1e;
   }
 
   .debug {

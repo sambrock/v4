@@ -8,6 +8,6 @@ const { ...attrs } = Astro.props;
 
 <a
   {...attrs}
-  class={`inline-flex items-center hover:text-primary gap-2 [&>span]:border-dotted [&>span]:border-b [&>span]:border-black/40 ${attrs.class}`}
+  class={`inline-flex items-center gap-2 underline underline-offset-4 decoration-white/10 hover:decoration-white/30 ${attrs.class}`}
   ><slot /></a
 >
