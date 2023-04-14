@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {}
+
+const { ...attrs } = Astro.props;
+---
+
+<div class={`rounded-lg bg-white/10 shadow-2xl shadow-black/90 overflow-clip aspect-video ${attrs.class}`} {...attrs}>
+  <div class="px-3 py-[6px] flex gap-[6px] border-b border-white/5">
+    <div class="w-2 bg-white/10 aspect-square rounded-full"></div>
+    <div class="w-2 bg-white/10 aspect-square rounded-full"></div>
+    <div class="w-2 bg-white/10 aspect-square rounded-full"></div>
+  </div>
+  <div class="overflow-clip">
+    <slot />
+  </div>
+</div>

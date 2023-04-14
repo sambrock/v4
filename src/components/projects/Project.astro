@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {}
+
+const { ...attrs } = Astro.props;
+---
+
+<div
+  class={`group grid gap-6 grid-rows-[26px,1fr] p-6 overflow-clip h-full rounded-xl bg-white/5 ${attrs.class}`}
+  {...attrs}
+>
+  <slot />
+</div>

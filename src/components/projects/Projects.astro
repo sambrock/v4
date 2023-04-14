@@ -1,21 +1,24 @@
 ---
+import Exterra from './Exterra.astro';
 import Filmq from './Filmq.astro';
 import Pace from './Pace.astro';
 import Vendee from './Vendee.astro';
 ---
 
 <div class="my-36">
-  <h2 class="text-lg font-medium mb-6">Featured projects</h2>
-  <div class="grid gap-4 grid-cols-3 grid-rows-2 h-[600px]">
-    <div class="col-span-2 row-start-1 row-span-1 ">
-      <Filmq />
+  <h2 class="font-medium mb-6">Featured projects</h2>
+  <div class="grid gap-4 grid-cols-3 grid-rows-2 h-[700px]">
+    <div class="col-start-2 row-start-2 col-span-2 row-span-1">
+      <Exterra />
     </div>
-    <div class="col-start-3 row-start-1 col-span-1 row-span-2 rounded-xl bg-white/5"></div>
-    <div class="">
-      <Vendee />
+    <div class="col-span-2 col-start-1 row-start-1 row-span-1">
+      <Filmq />
     </div>
     <div class="">
       <Pace />
+    </div>
+    <div class="col-start-3 row-start-1">
+      <Vendee />
     </div>
   </div>
 </div>

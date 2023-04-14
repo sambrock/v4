@@ -1,12 +1,13 @@
 ---
-import MockWindow from '../MockWindow.astro';
+import BrowserMockup from '../BrowserMockup.astro';
+import Project from './Project.astro';
 ---
 
-<div class="group p-6 overflow-clip h-full rounded-xl bg-white/5 hover:bg-[#4A4FF6]">
-  <div class="w-36">
+<Project class="hover:bg-[#4A4FF6]">
+  <div class="w-24">
     <img src="/projects/vendee/logo-w.svg" />
   </div>
-  <MockWindow class="mt-6 w-[780px]">
+  <BrowserMockup class="w-[780px]">
     <img src="/projects/vendee/dashboard.webp" />
-  </MockWindow>
-</div>
+  </BrowserMockup>
+</Project>

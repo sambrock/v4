@@ -8,6 +8,6 @@ const { ...attrs } = Astro.props;
 
 <a
   {...attrs}
-  class={`inline-flex items-center gap-2 text-[#e8e8e8cc] hover:text-[#e8e8e8] underline underline-offset-4 decoration-white/20 hover:decoration-white/40 ${attrs.class}`}
-  ><slot /></a
+  class={`inline-flex items-center gap-1 text-[#e8e8e8cc] hover:text-[#e8e8e8] transition-colors ${attrs.class}`}
+  ><slot />{attrs.target === '_blank' && <span class="text-[12px]">↗</span>}</a
 >
