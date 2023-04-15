@@ -1,6 +1,5 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import { clsx } from 'clsx';
 
 export type Props = HTMLAttributes<'div'>;
 
@@ -8,7 +7,7 @@ const props = Astro.props;
 ---
 
 <div
-  class={clsx('rounded-lg bg-white/10 shadow-2xl shadow-black/90 overflow-clip aspect-video', props.class)}
+  class:list={['rounded-lg bg-white/10 shadow-2xl shadow-black/90 overflow-clip aspect-video', props.class]}
   {...props}
 >
   <div class="px-3 py-[6px] flex gap-[6px] border-b border-white/5">

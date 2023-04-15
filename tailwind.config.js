@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.astro'],
+  content: ['./src/**/*.astro', './src/**/*.svelte'],
   theme: {
     extend: {
       colors: {
-        primary: '#ff1700',
-        
+        default: 'var(--neutral-text)',
+        secondary: 'var(--neutral-secondary)',
       },
     },
   },

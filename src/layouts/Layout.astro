@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -23,21 +23,36 @@
 </html>
 
 <style is:global>
+  :root {
+    --font-sans: 'Rubik', sans-serif;
+    --dark-background: rgb(13, 13, 13);
+    --neutral-text: rgb(255, 255, 255);
+    --neutral-secondary: rgb(255, 255, 255, 0.7);
+  }
+
+  html,
   body {
-    font-family: 'Rubik', sans-serif;
-    background-color: #0d0d0d;
-    color: #e8e8e8;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-sans);
+    background-color: var(--dark-background);
+    color: var(--neutral-text);
     text-rendering: optimizelegibility;
     text-size-adjust: none;
+    color-scheme: dark;
+    min-height: 100vh;
   }
 
   *::selection {
-    background-color: #e8e8e8;
-    color: #0d0d0d;
+    background-color: var(--neutral-text);
+    color: var(--dark-background);
   }
 
   .debug {
     border: 1px red solid;
+  }
+
+  .gradient {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>
