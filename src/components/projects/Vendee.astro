@@ -1,13 +1,19 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
+import { clsx } from 'clsx';
 import BrowserMockup from '../BrowserMockup.astro';
-import Project from './Project.astro';
+import Project from '../Project.astro';
+
+export type Props = HTMLAttributes<'div'>;
+
+const { slot, ...props } = Astro.props;
 ---
 
-<Project class="hover:bg-[#4A4FF6]">
+<Project class={clsx(props.class)} {...props}>
   <div class="w-24">
     <img src="/projects/vendee/logo-w.svg" />
   </div>
-  <BrowserMockup class="w-[780px]">
+  <BrowserMockup class="w-[700px]">
     <img src="/projects/vendee/dashboard.webp" />
   </BrowserMockup>
 </Project>

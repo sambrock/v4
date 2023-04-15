@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { clsx } from 'clsx';
+
+export type Props = HTMLAttributes<'div'>;
+
+const props = Astro.props;
+---
+
+<div
+  class={clsx('group grid gap-6 grid-rows-[26px,1fr] p-6 overflow-clip rounded-xl bg-white/5 h-[360px]', props.class)}
+  {...props}
+>
+  <slot />
+</div>

@@ -1,9 +1,15 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
+import { clsx } from 'clsx';
 import BrowserMockup from '../BrowserMockup.astro';
-import Project from './Project.astro';
+import Project from '../Project.astro';
+
+export type Props = HTMLAttributes<'div'>;
+
+const { slot, ...props } = Astro.props;
 ---
 
-<Project class="hover:bg-[#000]">
+<Project class={clsx('hover:bg-[#000]', props.class)} {...props}>
   <div class="w-28 flex items-center">
     <img src="/projects/filmq/filmlist-logo.svg" />
   </div>

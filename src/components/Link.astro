@@ -1,13 +1,19 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import { clsx } from 'clsx';
 
-export interface Props extends HTMLAttributes<'a'> {}
+export type Props = HTMLAttributes<'a'>;
 
-const { ...attrs } = Astro.props;
+const props = Astro.props;
 ---
 
 <a
-  {...attrs}
-  class={`inline-flex items-center gap-1 text-[#e8e8e8cc] hover:text-[#e8e8e8] transition-colors ${attrs.class}`}
-  ><slot />{attrs.target === '_blank' && <span class="text-[12px]">↗</span>}</a
+  class={clsx(
+    'inline-flex items-center gap-2 text-[#e8e8e8cc] hover:text-[#fff] transition-colors',
+    props.target === '_blank' && 'after:content-["↗"] after:text-xs after:-ml-1',
+    props.class
+  )}
+  {...props}
 >
+  <slot />
+</a>
