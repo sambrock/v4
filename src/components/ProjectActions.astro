@@ -11,7 +11,10 @@ export type Props = HTMLAttributes<'div'> & {
 const { projectHref, githubHref, ...props } = Astro.props;
 ---
 
-<div class:list={['flex gap-4 text-sm items-center invisible group-hover:visible', props.class]} {...props}>
+<div
+  class:list={['flex gap-2 md:gap-4 text-sm items-center visible md:invisible md:group-hover:visible', props.class]}
+  {...props}
+>
   {
     githubHref && (
       <Link href={githubHref} target="_blank">

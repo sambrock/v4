@@ -12,7 +12,7 @@ const { slot, ...props } = Astro.props;
 <Project {...props}>
   <div class="flex items-center justify-between">
     <div class="w-24">
-      <img src="/projects/vendee/logo-w.svg" />
+      <img src="/projects/vendee/logo-w.svg" alt="Vendee logo" />
     </div>
     <ProjectActions
       githubHref="https://github.com/sambrock/vendee"
@@ -21,7 +21,7 @@ const { slot, ...props } = Astro.props;
   </div>
   <div class="relative">
     <BrowserMockup class="absolute w-[740px]">
-      <img src="/projects/vendee/dashboard.webp" />
+      <img src="/projects/vendee/dashboard.webp" alt="Vendee web app" />
     </BrowserMockup>
   </div>
 </Project>

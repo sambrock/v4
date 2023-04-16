@@ -9,14 +9,16 @@ export type Props = HTMLAttributes<'div'>;
 const { slot, ...props } = Astro.props;
 ---
 
-<Project class:list={['hover:bg-[#000]', props.class]} {...props}>
+<Project class:list={[props.class]} {...props}>
   <div class="flex items-center justify-between">
-    <div class="w-28 flex items-center">
-      <img src="/projects/filmq/filmlist-logo.svg" />
+    <div class="w-28 h-full flex items-center">
+      <img src="/projects/filmq/logo.svg" alt="FILMQ logo" class="h-full" />
     </div>
     <ProjectActions projectHref="https://filmq.vercel.app" githubHref="https://github.com/sambrock/filmq" />
   </div>
-  <BrowserMockup>
-    <img src="/projects/filmq/home.png" />
-  </BrowserMockup>
+  <div class="relative">
+    <BrowserMockup class="absolute w-[740px] md:w-full">
+      <img src="/projects/filmq/home.webp" alt="FILMQ web app" />
+    </BrowserMockup>
+  </div>
 </Project>

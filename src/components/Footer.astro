@@ -1,5 +1,11 @@
-<footer class="flex items-center justify-center pb-12 gap-6">
-  <div class="w-6">
-    <img src="/logo/logo-w.svg" class="select-none opacity-20" />
+---
+import Link from './Link.astro';
+---
+
+<footer class="inline-flex items-center justify-between pb-12 gap-2 text-xs text-secondary">
+  <div class="w-6 mr-6">
+    <img src="/logo/logo.svg" class="select-none opacity-75" alt="Logo" />
   </div>
+  <Link href="https://astro.build" target="_blank" class="opacity-50">Made with Astro</Link>
+  <Link href="https://github.com/sambrock/v4" target="_blank">sambrock/v4</Link>
 </footer>

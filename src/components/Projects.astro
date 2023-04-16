@@ -4,8 +4,11 @@ import Filmq from './projects/Filmq.astro';
 import Vendee from './projects/Vendee.astro';
 ---
 
-<div class="grid grid-cols-2 gap-2 my-36">
-  <Filmq class="col-span-2" />
-  <Vendee />
-  <Exterra />
+<div class="space-y-4 my-32">
+  <!-- <h2 class="text-secondary">Featured projects</h2> -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    <Filmq class="md:col-span-2" />
+    <Vendee />
+    <Exterra />
+  </div>
 </div>
