@@ -6,13 +6,17 @@ import GitHubIcon from '../icons/GitHubIcon.astro';
 export type Props = HTMLAttributes<'div'> & {
   projectHref?: string;
   githubHref?: string;
+  projectLabel?: string;
 };
 
-const { projectHref, githubHref, ...props } = Astro.props;
+const { projectHref, githubHref, projectLabel, ...props } = Astro.props;
 ---
 
 <div
-  class:list={['flex gap-2 md:gap-4 text-sm items-center visible md:invisible md:group-hover:visible', props.class]}
+  class:list={[
+    'flex gap-2 md:gap-4 text-sm items-center visible md:invisible md:group-hover:visible md:group-focus-within:visible',
+    props.class,
+  ]}
   {...props}
 >
   {
@@ -26,7 +30,7 @@ const { projectHref, githubHref, ...props } = Astro.props;
   {
     projectHref && (
       <Link href={projectHref} target="_blank">
-        Launch
+        {projectLabel || 'Launch'}
       </Link>
     )
   }

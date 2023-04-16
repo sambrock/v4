@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import NorthEast from '../icons/NorthEast.astro';
 
 export type Props = HTMLAttributes<'a'>;
 
@@ -7,12 +8,9 @@ const props = Astro.props;
 ---
 
 <a
-  class:list={[
-    'inline-flex items-center gap-2 text-secondary hover:text-default transition-colors',
-    props.target === '_blank' && 'after:content-["↗"] after:text-xs after:-ml-1',
-    props.class,
-  ]}
+  class:list={['inline-flex items-center gap-2 text-secondary hover:text-default transition-colors', props.class]}
   {...props}
 >
   <slot />
+  {props.target === '_blank' && <NorthEast class="-ml-1" />}
 </a>

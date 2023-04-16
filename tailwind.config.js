@@ -6,6 +6,11 @@ export default {
       colors: {
         default: 'var(--neutral-text)',
         secondary: 'var(--neutral-secondary)',
+        tertiary: 'var(--neutral-tertiary)',
+      },
+
+      transitionTimingFunction: {
+        ease: 'cubic-bezier(0.55,0.085,0.68,0.53)',
       },
     },
   },

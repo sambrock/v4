@@ -5,10 +5,19 @@ import Vendee from './projects/Vendee.astro';
 ---
 
 <div class="space-y-4 my-32">
-  <!-- <h2 class="text-secondary">Featured projects</h2> -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+  <h2 class="animate-in-projects-title">Featured projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 animate-in-projects">
     <Filmq class="md:col-span-2" />
     <Vendee />
     <Exterra />
   </div>
 </div>
+
+<style is:inline>
+  .animate-in-projects-title {
+    animation: 800ms ease 1500ms 1 normal backwards running fade-in;
+  }
+  .animate-in-projects {
+    animation: 1000ms ease 1500ms 1 normal backwards running in-y;
+  }
+</style>
