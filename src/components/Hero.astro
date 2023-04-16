@@ -9,13 +9,13 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
   <div class="w-16 md:w-24 pt-12 md:pt-24 pb-8 animate-in-logo">
     <img src="/logo/logo.svg" class="select-none" alt="Logo" />
   </div>
-  <div class="space-y-2 gradient">
+  <div class="space-y-2 gradient animate-in-hero">
     <h1 class="block text-4xl md:text-5xl font-bold animate-in-hero-main">Sam Brocklehurst</h1>
-    <h2 class="block text-2xl md:text-3xl font-medium text-secondary animate-in-hero-secondary">
+    <h2 class="block text-2xl md:text-3xl font-medium text-secondary animate-in-hero-main-secondary">
       Full Stack Developer
     </h2>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-in-main-text">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-in-hero">
     <div class="space-y-4">
       <p class="text-secondary">
         I’m currently working at <Link href="https://www.asafe.com" target="_blank">A-SAFE</Link> as a software developer,
@@ -36,7 +36,7 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
 <style is:inline>
   @keyframes logo {
     from {
-      transform: scale(0.9);
+      transform: scale(0.8);
       opacity: 0;
     }
     to {
@@ -46,15 +46,15 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
   }
 
   .animate-in-logo {
-    animation: 1000ms ease 0ms 1 normal backwards running logo;
+    animation: 800ms ease 0ms 1 normal backwards running logo;
+  }
+  .animate-in-hero {
+    animation: 800ms ease 800ms 1 normal backwards running fade-in;
   }
   .animate-in-hero-main {
-    animation: 1000ms ease 500ms 1 normal backwards running in-y;
+    animation: 800ms ease 800ms 1 normal backwards running in-y-2;
   }
-  .animate-in-hero-secondary {
-    animation: 1000ms ease 700ms 1 normal backwards running in-y;
-  }
-  .animate-in-main-text {
-    animation: 800ms ease 1200ms 1 normal backwards running fade-in;
+  .animate-in-hero-main-secondary {
+    animation: 800ms ease 1000ms 1 normal backwards running in-y-2;
   }
 </style>
