@@ -24,7 +24,7 @@
   bind:this={container}
   on:mousemove={handleMouseMove}
   on:mouseleave={handleMouseLeave}
-  class="relative cursor-shine rounded-xl"
+  class="relative rounded-xl"
 >
   <slot />
 </div>
