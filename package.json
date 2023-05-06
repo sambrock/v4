@@ -1,6 +1,6 @@
 {
   "name": "v4",
-  "description": "Sam Brocklehurst portfolio v4",
+  "description": "Portfolio v4",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,6 +13,8 @@
   "dependencies": {
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/vercel": "^3.3.0",
+    "@vercel/analytics": "^1.0.1",
     "astro": "^2.3.0",
     "svelte": "^3.58.0"
   },
