@@ -1,9 +1,0 @@
-{
-    "name": "sambrock.com",
-    "short_name": "sambrock.com",
-    "description": "Sam Brocklehurst's portfolio website",
-    "start_url": ".",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
-}
