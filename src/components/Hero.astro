@@ -6,11 +6,9 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
 ---
 
 <div class="flex flex-col gap-12 py-8 pt-48">
-  <div class="space-y-1 md:space-y-2 gradient">
-    <h1 class="block text-4xl md:text-5xl font-bold animate-in-hero-main">Sam Brocklehurst</h1>
-    <h2 class="block text-2xl md:text-3xl font-medium text-secondary animate-in-hero-main-secondary">
-      Full Stack Developer
-    </h2>
+  <div class="space-y-1 md:space-y-2 gradient header-gradient animate-in-hero">
+    <h1 class="block text-4xl md:text-5xl font-bold">Sam Brocklehurst</h1>
+    <h2 class="block text-2xl md:text-4xl font-bold">Full Stack Developer</h2>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-in-hero">
     <div class="space-y-4">
@@ -46,12 +44,12 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
     animation: 800ms ease 0ms 1 normal backwards running logo;
   }
   .animate-in-hero {
-    animation: 800ms ease 400ms 1 normal backwards running fade-in;
+    animation: 800ms ease 200ms 1 normal backwards running fade-in;
   }
-  .animate-in-hero-main {
+  /* .animate-in-hero-main {
     animation: 800ms ease 200ms 1 normal backwards running in-y-2;
   }
   .animate-in-hero-main-secondary {
     animation: 800ms ease 300ms 1 normal backwards running in-y-2;
-  }
+  } */
 </style>
