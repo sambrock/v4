@@ -5,11 +5,8 @@ import MailIcon from '../icons/MailIcon.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
 ---
 
-<div class="flex flex-col gap-12 py-8">
-  <div class="w-16 md:w-24 pt-12 md:pt-24 pb-8 animate-in-logo">
-    <img src="/logo/logo.svg" class="select-none" alt="Logo" />
-  </div>
-  <div class="space-y-1 md:space-y-2 gradient animate-in-hero">
+<div class="flex flex-col gap-12 py-8 pt-48">
+  <div class="space-y-1 md:space-y-2 gradient">
     <h1 class="block text-4xl md:text-5xl font-bold animate-in-hero-main">Sam Brocklehurst</h1>
     <h2 class="block text-2xl md:text-3xl font-medium text-secondary animate-in-hero-main-secondary">
       Full Stack Developer
@@ -36,7 +33,7 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
 <style is:inline>
   @keyframes logo {
     from {
-      transform: scale(0.8);
+      transform: scale(1);
       opacity: 0;
     }
     to {
@@ -49,12 +46,12 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
     animation: 800ms ease 0ms 1 normal backwards running logo;
   }
   .animate-in-hero {
-    animation: 800ms ease 500ms 1 normal backwards running fade-in;
+    animation: 800ms ease 400ms 1 normal backwards running fade-in;
   }
   .animate-in-hero-main {
-    animation: 800ms ease 500ms 1 normal backwards running in-y-2;
+    animation: 800ms ease 200ms 1 normal backwards running in-y-2;
   }
   .animate-in-hero-main-secondary {
-    animation: 800ms ease 600ms 1 normal backwards running in-y-2;
+    animation: 800ms ease 300ms 1 normal backwards running in-y-2;
   }
 </style>
