@@ -1,0 +1,13 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import VendeeLogo from '../assets/vendee.svg';
+---
+
+<ProjectCard
+  title="Vendee"
+  href="https://sambrock.com/vendee"
+  hrefLabel="sambrock.com/vendee"
+  description="A research project using AI and IoT to modernise physical retail — using machine learning to track occupancy, product interest & dynamic pricing for improved in-store analytics."
+>
+  <VendeeLogo class="size-6" stroke-width={2} slot="icon" />
+</ProjectCard>

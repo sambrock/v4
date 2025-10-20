@@ -1,0 +1,13 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import FilmChatLogo from '../assets/film-chat.svg';
+---
+
+<ProjectCard
+  title="FilmChat"
+  href="https://filmchat.app"
+  hrefLabel="filmchat.app"
+  description="An AI chatbot that gives you film recommendations, lets you try different models, and save picks to your watchlist."
+>
+  <FilmChatLogo class="size-6" stroke-width={2} slot="icon" />
+</ProjectCard>

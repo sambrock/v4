@@ -25,6 +25,7 @@
   on:mousemove={handleMouseMove}
   on:mouseleave={handleMouseLeave}
   class="relative rounded-xl"
+  role="presentation"
 >
   <slot />
 </div>

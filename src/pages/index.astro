@@ -1,16 +1,42 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Projects from '../components/Projects.astro';
+import GithubIcon from '../assets/github.svg';
+import LinkedinIcon from '../assets/linkedin.svg';
+import MailIcon from '../assets/mail.svg';
+
+import ButtonIcon from '../components/ButtonIcon.astro';
+import ProjectFilmChat from '../components/ProjectFilmChat.astro';
+import ProjectLaunchMap from '../components/ProjectLaunchMap.astro';
+import ProjectVendee from '../components/ProjectVendee.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <Header />
-  <main>
-    <Hero />
-    <Projects />
-  </main>
-  <Footer />
+  <div class="flex flex-col h-screen overflow-hidden">
+    <main class="grid grid-cols-2 h-full max-w-7xl mx-auto w-full">
+      <div class="flex justify-center flex-col mx-auto gap-y-2 w-md">
+        <div class="text-3xl font-medium mb-1 select-none">👋 Hey! I'm Sam</div>
+        <div class="text-neutral-100/60 text-lg">I'm a full stack developer based in Leeds, UK.</div>
+
+        <div class="mt-6 flex items-center gap-3">
+          <ButtonIcon href="https://github.com/sambrock" target="_blank" rel="noopener noreferrer">
+            <GithubIcon class="size-6" stroke-width={2} />
+          </ButtonIcon>
+          <ButtonIcon href="https://www.linkedin.com/in/sam-brocklehurst" target="_blank" rel="noopener noreferrer">
+            <LinkedinIcon class="size-6" stroke-width={2} />
+          </ButtonIcon>
+          <ButtonIcon href="mailto:hi@sambrock.com" target="_blank" rel="noopener noreferrer">
+            <MailIcon class="size-6" stroke-width={2} />
+          </ButtonIcon>
+        </div>
+      </div>
+
+      <div class="flex items-center mx-auto">
+        <div class="flex flex-col mx-auto w-md gap-4">
+          <ProjectFilmChat />
+          <ProjectLaunchMap />
+          <ProjectVendee />
+        </div>
+      </div>
+    </main>
+  </div>
 </Layout>
