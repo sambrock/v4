@@ -1,28 +1,13 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import BrowserMockup from '../BrowserMockup.astro';
 import Project from '../Project.astro';
-import ProjectActions from '../ProjectActions.astro';
-
-export type Props = HTMLAttributes<'div'>;
-
-const { slot, ...props } = Astro.props;
+import VendeeLogo from '../../assets/vendee.svg';
 ---
 
-<Project {...props}>
-  <div class="flex items-center justify-between">
-    <div class="w-24">
-      <img src="/projects/vendee/logo-w.svg" alt="Vendee logo" />
-    </div>
-    <ProjectActions
-      githubHref="https://github.com/sambrock/vendee"
-      projectHref="https://sambrock.com/projects/vendee.pdf"
-      projectLabel="Demo"
-    />
-  </div>
-  <div class="relative">
-    <BrowserMockup class="absolute w-[740px]">
-      <img src="/projects/vendee/dashboard.webp" alt="Vendee web app" />
-    </BrowserMockup>
-  </div>
+<Project
+  title="Vendee"
+  href="https://sambrock.com/vendee"
+  hrefLabel="sambrock.com/vendee"
+  description="A research project using AI and IoT to modernise physical retail — using machine learning to track occupancy, product interest & dynamic pricing for improved in-store analytics."
+>
+  <VendeeLogo class="size-6" stroke-width={2} slot="icon" />
 </Project>

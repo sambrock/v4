@@ -1,118 +1,24 @@
+---
+import '../styles.css';
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sam Brocklehurst — Full Stack Developer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    
     <script defer src="/_vercel/insights/script.js"></script>
 
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon//favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff1700" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
 
-    <meta name="description" content="Sam Brocklehurst is a full stack developer based in the UK." />
+    <meta name="description" content="Sam Brocklehurst is a full stack developer based in Leeds, UK." />
   </head>
-  <body>
-    <div class="px-4 md:max-w-5xl mx-auto">
-      <slot />
-    </div>
+  <body class="bg-background-0 text-foreground-0">
+    <slot />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --font-sans: 'Rubik', sans-serif;
-    --dark-background: rgb(13, 13, 13);
-    --neutral-text: rgb(255, 255, 255);
-    --neutral-secondary: rgb(255, 255, 255, 0.7);
-    --neutral-tertiary: rgb(255, 255, 255, 0.5);
-    --cursor-y: 0;
-    --cursor-x: 0;
-  }
-
-  html,
-  body {
-    font-family: var(--font-sans);
-    background-color: var(--dark-background);
-    color: var(--neutral-text);
-    text-rendering: optimizelegibility;
-    text-size-adjust: none;
-    color-scheme: dark;
-    min-height: 100vh;
-  }
-
-  *::selection {
-    background-color: var(--neutral-text);
-    color: var(--dark-background);
-  }
-
-  *:focus-visible {
-    outline: 2px solid var(--neutral-text);
-    border-radius: 2px;
-    outline-offset: 2px;
-  }
-
-  .cursor-shine {
-    background: radial-gradient(
-      600px circle at var(--cursor-x) var(--cursor-y),
-      rgba(255, 255, 255, 0.08),
-      transparent 40%
-    );
-  }
-
-  .header-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  @keyframes in-y {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes in-y-2 {
-    from {
-      transform: translateY(-12px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-</style>
-
-<script>
-  console.log('Thanks for visiting my portflio!');
-  console.log('Here are some secret links:');
-  console.log('- https://sambrock.com/projects/pace.pdf (An unfeatured project)');
-  console.log('- https://filmlist.sambrock.com/v/ayjslyrgiddn (Some of my favourite films)');
-</script>
