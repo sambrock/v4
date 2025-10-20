@@ -3,82 +3,14 @@
 
 @theme {
   --font-sans: 'Roboto Mono', monospace;
-  --dark-background: rgb(13, 13, 13);
-  --neutral-text: rgb(255, 255, 255);
-  --neutral-secondary: rgb(255, 255, 255, 0.7);
-  --neutral-tertiary: rgb(255, 255, 255, 0.5);
-  --cursor-y: 0;
-  --cursor-x: 0;
-}
 
-.debug {
-  border: 1px red solid;
+  --color-background-0: #000000;
+  --color-foreground-0: #f2f2f2;
+  --color-foreground-1: #8c8c8c;
+  --color-border-0: #1b1b1b;
 }
-
-/* html,
-body {
-  font-family: var(--font-sans);
-  background-color: var(--dark-background);
-  color: var(--neutral-text);
-  text-rendering: optimizelegibility;
-  text-size-adjust: none;
-  color-scheme: dark;
-  min-height: 100vh;
-} */
 
 *::selection {
-  background-color: var(--neutral-text);
-  color: var(--dark-background);
-}
-
-*:focus-visible {
-  outline: 2px solid var(--neutral-text);
-  border-radius: 2px;
-  outline-offset: 2px;
-}
-
-.cursor-shine {
-  background: radial-gradient(
-    300px circle at var(--cursor-x) var(--cursor-y),
-    rgba(255, 255, 255, 0.08),
-    transparent 40%
-  );
-}
-
-.header-gradient {
-  background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-@keyframes in-y {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes in-y-2 {
-  from {
-    transform: translateY(-12px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  background-color: var(--color-foreground-0);
+  color: var(--color-background-0);
 }

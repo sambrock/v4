@@ -1,21 +1,37 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import ProjectWrapper from './ProjectWrapper.svelte';
+import ExternalLinkIcon from '../assets/external-link.svg';
 
-export type Props = HTMLAttributes<'div'>;
+export type Props = HTMLAttributes<'div'> & {
+  title: string;
+  hrefLabel: string;
+  href: string;
+  description: string;
+};
 
 const props = Astro.props;
 ---
 
-<div class:list={['group select-none', props.class]} {...props}>
-  <ProjectWrapper client:load>
-    <div
-      class:list={[
-        'group grid gap-4 md:gap-6 grid-rows-[26px,1fr] p-4 md:p-6 overflow-clip rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-white/10 transition-all h-[280px] md:h-[360px]',
-      ]}
-      tabindex="0"
-    >
-      <slot />
+<div class="bg-foreground-0/5 py-3 px-1 backdrop-blur-md rounded-xl border-1 border-border-0" {...props}>
+  <a
+    href={props.href}
+    target="_blank"
+    class="hover:bg-foreground-0/10 items-center gap-3 w-min px-3 mx-1 py-1 cursor-pointer inline-flex rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground-0"
+    rel="noopener noreferrer"
+  >
+    <div class="size-9 bg-background-0 flex items-center justify-center rounded-md ring-1 ring-foreground-0/5">
+      <slot name="icon" class="size-5" />
     </div>
-  </ProjectWrapper>
+    <div>
+      <div class="font-medium text-base">{props.title}</div>
+      <div class="flex items-center text-foreground-1 text-xs gap-1">
+        <ExternalLinkIcon class="size-3.5" stroke-width={2} />
+        <div class="whitespace-nowrap">{props.hrefLabel}</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="px-4 text-sm text-foreground-1 mt-2">
+    {props.description}
+  </div>
 </div>

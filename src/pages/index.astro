@@ -2,36 +2,43 @@
 import GithubIcon from '../assets/github.svg';
 import LinkedinIcon from '../assets/linkedin.svg';
 import MailIcon from '../assets/mail.svg';
+import Logo from '../assets/logo-w.svg';
 
 import ButtonIcon from '../components/ButtonIcon.astro';
-import ProjectFilmChat from '../components/ProjectFilmChat.astro';
-import ProjectLaunchMap from '../components/ProjectLaunchMap.astro';
-import ProjectVendee from '../components/ProjectVendee.astro';
+import ProjectFilmChat from '../components/projects/FilmChat.astro';
+import ProjectLaunchMap from '../components/projects/LaunchMap.astro';
+import ProjectVendee from '../components/projects/Vendee.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
   <div class="flex flex-col h-screen overflow-hidden">
-    <main class="grid grid-cols-2 h-full max-w-7xl mx-auto w-full">
-      <div class="flex justify-center flex-col mx-auto gap-y-2 w-md">
-        <div class="text-3xl font-medium mb-1 select-none">👋 Hey! I'm Sam</div>
-        <div class="text-neutral-100/60 text-lg">I'm a full stack developer based in Leeds, UK.</div>
+    <main class="grid px-4 grid-cols-1 lg:grid-cols-2 h-full max-w-7xl mx-auto w-full">
+      <div class="flex py-40 lg:py-0 justify-center flex-col mx-auto gap-y-3 w-full lg:w-md">
+        <div class="text-3xl text-foreground-0 font-medium mb-1 select-none">👋 Hey! I'm Sam</div>
+        <div class="text-foreground-1 text-lg">I'm a full stack developer based in Leeds, UK.</div>
 
-        <div class="mt-6 flex items-center gap-3">
-          <ButtonIcon href="https://github.com/sambrock" target="_blank" rel="noopener noreferrer">
+        <div class="mt-3 flex items-center gap-3">
+          <ButtonIcon href="https://github.com/sambrock" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <GithubIcon class="size-6" stroke-width={2} />
           </ButtonIcon>
-          <ButtonIcon href="https://www.linkedin.com/in/sam-brocklehurst" target="_blank" rel="noopener noreferrer">
+          <ButtonIcon
+            href="https://www.linkedin.com/in/sam-brocklehurst"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             <LinkedinIcon class="size-6" stroke-width={2} />
           </ButtonIcon>
-          <ButtonIcon href="mailto:hi@sambrock.com" target="_blank" rel="noopener noreferrer">
+          <ButtonIcon href="mailto:hi@sambrock.com" target="_blank" rel="noopener noreferrer" aria-label="Email ">
             <MailIcon class="size-6" stroke-width={2} />
           </ButtonIcon>
         </div>
       </div>
 
-      <div class="flex items-center mx-auto">
-        <div class="flex flex-col mx-auto w-md gap-4">
+      <div class="flex items-center mx-auto relative">
+        <div class="flex flex-col mx-auto w-full lg:w-md gap-4">
+          <!-- <Logo class="absolute -top-16 right-4 self-start w-20 h-20 hover:-top-22 transition-all" /> -->
           <ProjectFilmChat />
           <ProjectLaunchMap />
           <ProjectVendee />

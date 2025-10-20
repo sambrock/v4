@@ -1,13 +1,13 @@
 ---
-import ProjectCard from './ProjectCard.astro';
-import LaunchMapLogo from '../assets/launchmap-1.svg';
+import Project from '../Project.astro';
+import LaunchMapLogo from '../../assets/launchmap.svg';
 ---
 
-<ProjectCard
+<Project
   title="LaunchMap"
-  href="https://exterra.sambrock.com"
+  href="https://launchmap.space"
   hrefLabel="launchmap.space"
   description="Explore upcoming space launches around the world on an interactive map. See where rockets lift off and when the next one's launching."
 >
   <LaunchMapLogo class="size-6" stroke-width={2} slot="icon" />
-</ProjectCard>
+</Project>
