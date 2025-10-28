@@ -2,8 +2,6 @@
 import GithubIcon from '../assets/github.svg';
 import LinkedinIcon from '../assets/linkedin.svg';
 import MailIcon from '../assets/mail.svg';
-import Logo from '../assets/logo-w.svg';
-
 import ButtonIcon from '../components/ButtonIcon.astro';
 import ProjectFilmChat from '../components/projects/FilmChat.astro';
 import ProjectLaunchMap from '../components/projects/LaunchMap.astro';
@@ -12,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <div class="flex flex-col h-screen overflow-hidden">
-    <main class="grid px-4 grid-cols-1 lg:grid-cols-2 h-full max-w-7xl mx-auto w-full">
+  <div class="flex h-screen">
+    <main class="grid px-4 grid-cols-1 py-24 lg:grid-cols-2 max-w-7xl mx-auto w-full my-auto h-max">
       <div class="flex py-40 lg:py-0 justify-center flex-col mx-auto gap-y-3 w-full lg:w-md">
         <div class="text-3xl text-foreground-0 font-medium mb-1 select-none">👋 Hey! I'm Sam</div>
         <div class="text-foreground-1 text-lg">I'm a full stack developer based in Leeds, UK.</div>
@@ -38,7 +36,6 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="flex items-center mx-auto relative">
         <div class="flex flex-col mx-auto w-full lg:w-md gap-4">
-          <!-- <Logo class="absolute -top-16 right-4 self-start w-20 h-20 hover:-top-22 transition-all" /> -->
           <ProjectFilmChat />
           <ProjectLaunchMap />
           <ProjectVendee />
